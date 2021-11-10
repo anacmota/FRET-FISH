@@ -38,3 +38,7 @@ Open LinkerDesign.m and in line 6 select which replicate is going to be shown. T
 ## Optimization of design: Group and Spacing
 
 Open SpacingGroupDesigns.m and in line 5 select which replicate is going to be shown. The data of each replicate is in "datasets" folder. The script will open which files correspond to each replicate.
+
+## Nuclear Staining Measurement
+
+The nd2 files coming from Nikon microscope are placed in a folder (due to their large size, we only provide the images by request) and the Fiji script fromND2_toINTENSITIES.ijm.ijm will measure the average of the staining intensity within the nucleus segmentation. The average of the intensity values per nuclei are exported in a csv file and the R script Treatment_nuclear_staining.R will process the data and show the comparison between the control and the treated cells in boxplots.
