@@ -42,3 +42,29 @@ Open SpacingGroupDesigns.m and in line 5 select which replicate is going to be s
 ## Nuclear Staining Measurement
 
 The nd2 files coming from Nikon microscope are placed in a folder (due to their large size, we only provide the images by request) and the Fiji script fromND2_toINTENSITIES.ijm.ijm will measure the average of the staining intensity within the nucleus segmentation. The average of the intensity values per nuclei are exported in a csv file and the R script Treatment_nuclear_staining.R will process the data and show the comparison between the control and the treated cells in boxplots.
+
+## Automatic dot picking
+
+Open script named fp_main_gui.m . This script will open a window with some pre-setted values that can be changed. The resulting picked dots are saved in a newly created "data" folder.
+
+setname: folder name where the images are located.
+
+autoPick: the pipeline will select the 2 FRET pairs automatically if written "1", other number will consider already pre-selected dots.
+
+xyres: resolution of the xy plane.
+
+zres: resolution of the z plane.
+
+maxdist_nm: threshold distance in nm in order to pair donor and acceptor molecules.
+
+calcdolder: directory of the folder with segmented nuclei.
+
+imagefolder: directory of the folder with the raw images in tif format.
+
+donorchannel: donor channel name (e.g. a488).
+
+acceptorchannel: acceptor channel name (e.g. a594).
+
+fretchannel: FRET channel name (e.g. a488fret).
+
+dapichannel: DAPI channel name (e.g. dapi).
