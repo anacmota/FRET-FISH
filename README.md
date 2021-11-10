@@ -29,3 +29,8 @@ cat *.txt > homologiesFiltAll.txt
 The second script will calculate the penalty total for each oligo. User must change line 5 for the gene of interest.
 
 The third script will generate a good set of oligos for FRET-FISH but first the user should confirm the variables in lines 16-20 that the spacing and number of oligos in groups as explained in the article. A question will pop-up that is if the user is interested to include mouse barcodes in the flaps. If answered 1, the barcode file will be read. If answered 0, the oligo list will be generated without the barcodes. The barcode file can be replaced with other barcodes if the user has another list.
+
+
+## optimization of design: Linker sequence
+
+Open LinkerDesign.m and in line 6 select which replicate is going to be shown. The data of each replicate is in "datasets" folder. The script will open which files correspond to each replicate.
