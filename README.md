@@ -68,3 +68,13 @@ acceptorchannel: acceptor channel name (e.g. a594).
 fretchannel: FRET channel name (e.g. a488fret).
 
 dapichannel: DAPI channel name (e.g. dapi).
+
+## FRET-FISH analysis tools
+
+The analysis related to the ATP depletion treatment is found in the script ATP_depletion.m . The data used for this analysis is in the folder "data".
+
+The prolonged cell culture analysis is shown in Passage_DAPI_boxplot.m and in Passage_FRET_distribution.m . For Passage_DAPI_boxplot.m , the analysis requires the processed images files that due to their large size is only provided by request. The remaining data is provided in the folder "data".
+
+The cell cycle analysis is presented in the scripts G1_G2_FRET_distribution.m and in G1_G2_M_FRET_boxplot.m . In the first script shows the FRET probability distribution and the second script shows the boxplots for G1 High Hoechst, G1 Low Hoechst, G2 and M cell cycle phases. The data used for these analysis is in the folder "data".
+
+The analysis of the correlations in between the orthogonal techniques: FRET-FISH, ATAC-seq and Hi-C are shown in the script FRET_ATAC_HiC_corr.m . The data used for this analysis is in the folder "data".
