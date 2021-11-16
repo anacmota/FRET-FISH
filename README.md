@@ -77,4 +77,6 @@ The prolonged cell culture analysis is shown in Passage_DAPI_boxplot.m and in Pa
 
 The cell cycle analysis is presented in the scripts G1_G2_FRET_distribution.m and in G1_G2_M_FRET_boxplot.m . In the first script shows the FRET probability distribution and the second script shows the boxplots for G1 High Hoechst, G1 Low Hoechst, G2 and M cell cycle phases. The data used for these analysis is in the folder "data".
 
+The lamina distance influence in the chromatin density analysis is presented in the script Lamina_distance_boxplot.m . The output figure shows boxplot distributions of FRET efficiency for each concentric layer of the nucleus in relation to the lamina. The data used for this analysis is in the folder "data".
+
 The analysis of the correlations in between the orthogonal techniques: FRET-FISH, ATAC-seq and Hi-C are shown in the script FRET_ATAC_HiC_corr.m . The data used for this analysis is in the folder "data".
