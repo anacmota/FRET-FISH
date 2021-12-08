@@ -2,7 +2,7 @@
 
 ## Probe design
 
-The folder for probe design contains 3 scripts that are numbered from 1 to 3 as is the order they are supposed to be run. Before running the first script download the sequence of interest at UCSC, like for example, http://genome.ucsc.edu/cgi-bin/das/mm10/dna?segment=chrX:101640630,101742858 . The first script has written the gene name of "Magix" and filename extension is ".txt", however this can be changed according to users preference. Once the oligo list file was generated, look for homologies in the reference genome on terminal. In case your machine cannot handle the whole file then split the file into smaller ones with:
+The folder for probe design contains 3 scripts that are numbered from 1 to 3 as is the order they are supposed to be run. Before running the first script download the sequence of interest at UCSC, like for example, http://genome.ucsc.edu/cgi-bin/das/mm10/dna?segment=chrX:101640630,101742858 . The first script "generate_oligos_1.m" has written the gene name of "Magix" and filename extension is ".txt", however this can be changed according to users preference. Once the oligo list file was generated from MATLAB, one should look for homologies in the reference genome (GRCm38 mouse in the case of "Magix") with BLAST command on Unix. In case your machine cannot handle the whole file without running out RAM then split the file into smaller ones with:
 
 split -l 20000 Oligos_List.fa
 
@@ -26,9 +26,9 @@ Concatenate all the files into one:
 
 cat *.txt > homologiesFiltAll.txt
 
-The second script will calculate the penalty total for each oligo. User must change line 5 for the gene of interest.
+The second MATLAB script "identities_penalty_2.m" will calculate the penalty total for each oligo. User must change line 5 for the gene of interest.
 
-The third script will generate a good set of oligos for FRET-FISH but first the user should confirm the variables in lines 16-20 that the spacing and number of oligos in groups as explained in the article. A question will pop-up that is if the user is interested to include mouse barcodes in the flaps. If answered 1, the barcode file will be read. If answered 0, the oligo list will be generated without the barcodes. The barcode file can be replaced with other barcodes if the user has another list.
+The third script "select_best_window_print_3.m" will generate a good set of oligos for FRET-FISH but first the user should confirm the variables in lines 16-20 regarding the spacing and number of oligos in groups as explained in the article. A question will pop-up whether the user is interested to include mouse barcodes in the flaps. If answered 1, the barcode file will be read. If answered 0, the oligo list will be generated without the barcodes. The barcode file "mouse barcodes.txt" can be replaced with other barcodes for instance when working with other organisms like human cells. The barcodes are intended to be used as primers for PCR amplification to selectively isolate a probe from an oligopool, therefore each gene/probe should have an unique combination of barcodes. The forward primer can be changed in line 162 from 3 to 25 since 1 and 2 are already used for reverse primer to distiguish the donor and acceptor oligos respectively.
 
 
 ## Optimization of design: Linker sequence
@@ -70,6 +70,8 @@ fretchannel: FRET channel name (e.g. a488fret).
 dapichannel: DAPI channel name (e.g. dapi).
 
 ## FRET-FISH analysis tools
+
+**The user only has to run the following MATLAB scripts in the "FRET-FISH analysis" folder. For the scripts Passage_DAPI_boxplot.m and G1_G2_M_FRET_boxplot.m, the user needs to dowload the processed files at https://kise-my.sharepoint.com/:f:/g/personal/ana_faustino_mota_ki_se/EvfboM9oEnlInmGG8N-mJg8BRat-T6TiX7LJMlvYJOFcOg?e=8XP8Is and update line 34-37 with the correct directory.**
 
 The analysis related to the ATP depletion treatment is found in the script ATP_depletion.m . The data used for this analysis is in the folder "data".
 
