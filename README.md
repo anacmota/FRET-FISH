@@ -55,7 +55,7 @@ Open ```SpacingGroupDesigns.m``` and in line 5 select which replicate is going t
 
 ## Nuclear Staining Measurement
 
-The nd2 files coming from Nikon microscope are placed in a folder (due to their large size, we only provide the images by request) and the Fiji script ```fromND2_toINTENSITIES.ijm.ijm``` will measure the average of the staining intensity within the nucleus segmentation. The average of the intensity values per nuclei are exported in a csv file and the R script ```Treatment_nuclear_staining.R``` will process the data and show the comparison between the control and the treated cells in boxplots.
+The nd2 files coming from Nikon microscope, saved in [Figshare](10.17044/scilifelab.17080892) (iAM608 - control and iAM609 - ATP depleted), are placed in a folder and the Fiji script ```fromND2_toINTENSITIES.ijm.ijm``` will measure the average of the staining intensity within the nucleus segmentation. The average of the intensity values per nuclei are exported in a csv file and the R script ```Treatment_nuclear_staining.R``` will process the data and show the comparison between the control and the treated cells in boxplots.
 
 ## Automatic dot picking
 
@@ -89,9 +89,9 @@ dapichannel: DAPI channel name (e.g. dapi).
 
 The analysis related to the ATP depletion treatment is found in the script ```ATP_depletion.m```. The data used for this analysis is in the folder "data".
 
-The prolonged cell culture analysis is shown in ```Passage_DAPI_boxplot.m``` and in ```Passage_FRET_distribution.m```. For ```Passage_DAPI_boxplot.m```, the analysis requires the processed images files that due to their large size is only provided by request. The remaining data is provided in the folder "data".
+The prolonged cell culture analysis is shown in ```Passage_DAPI_boxplot.m``` and in ```Passage_FRET_distribution.m```. For ```Passage_DAPI_boxplot.m```, the analysis requires the processed images files that are found in KI OneDrive. The remaining data is provided in the folder "data".
 
-The cell cycle analysis is presented in the scripts ```G1_G2_FRET_distribution.m``` and in ```G1_G2_M_FRET_boxplot.m```. In the first script shows the FRET probability distribution and the second script shows the boxplots for G1 High Hoechst, G1 Low Hoechst, G2 and M cell cycle phases. The data used for these analysis is in the folder "data".
+The cell cycle analysis is presented in the scripts ```G1_G2_FRET_distribution.m``` and in ```G1_G2_M_FRET_boxplot.m```. In the first script shows the FRET probability distribution and the second script shows the boxplots for G1 High Hoechst, G1 Low Hoechst, G2 and M cell cycle phases and requires the processed images files that are found in KI OneDrive. The data used for these analysis is in the folder "data".
 
 The lamina distance influence in the chromatin density analysis is presented in the script ```Lamina_distance_boxplot.m```. The output figure shows boxplot distributions of FRET efficiency for each concentric layer of the nucleus in relation to the lamina. The data used for this analysis is in the folder "data".
 
