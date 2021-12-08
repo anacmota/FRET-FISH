@@ -1,5 +1,7 @@
 # FRET-FISH
 
+MATLAB (R2020a)
+
 ## Probe design
 
 The folder for probe design contains 3 scripts that are numbered from 1 to 3 as is the order they are supposed to be run. Before running the first script download the sequence of interest at UCSC, like for example, http://genome.ucsc.edu/cgi-bin/das/mm10/dna?segment=chrX:101640630,101742858 . Save files like "gene.txt". The first script ```generate_oligos_1.m``` will break the 100kb region into all possible oligos, name each oligo, evaluate the GC content and other parameters and then prints a list. The script now has the gene name of "Magix" and filename extension is ".txt", however this can be changed according to users preference. Once the oligo list file was generated from MATLAB, one should look for homologies in the reference genome (GRCm38 mouse in the case of "Magix") with BLAST command on Unix. In case your machine cannot handle the whole file without running out RAM then split the file into smaller ones with:
@@ -45,7 +47,7 @@ The third script ```select_best_window_print_3.m``` will generate a good set of 
 
 ## Optimization of design: Linker sequence
 
-Open LinkerDesign.m and in line 6 select which replicate is going to be shown. The data of each replicate is in "datasets" folder. The script will open which files correspond to each replicate.
+Open ```LinkerDesign.m``` and in line 6 select which replicate is going to be displayed. The data of each replicate is in "datasets" folder. The script will open which files correspond to each replicate.
 
 ## Optimization of design: Group and Spacing
 
