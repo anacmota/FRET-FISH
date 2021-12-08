@@ -71,7 +71,7 @@ dapichannel: DAPI channel name (e.g. dapi).
 
 ## FRET-FISH analysis tools
 
-**The user only has to run the following MATLAB scripts in the "FRET-FISH analysis" folder. For the scripts Passage_DAPI_boxplot.m and G1_G2_M_FRET_boxplot.m, the user needs to dowload the processed files at https://kise-my.sharepoint.com/:f:/g/personal/ana_faustino_mota_ki_se/EvfboM9oEnlInmGG8N-mJg8BRat-T6TiX7LJMlvYJOFcOg?e=8XP8Is and update line 34-37 with the correct directory.**
+**The user only has to run the following MATLAB scripts in the "FRET-FISH analysis" folder. For the scripts Passage_DAPI_boxplot.m and G1_G2_M_FRET_boxplot.m, the user needs to dowload the processed files at [KI OneDrive](https://kise-my.sharepoint.com/:f:/g/personal/ana_faustino_mota_ki_se/EvfboM9oEnlInmGG8N-mJg8BRat-T6TiX7LJMlvYJOFcOg?e=8XP8Is) and update line 34-37 with the correct directory.**
 
 The analysis related to the ATP depletion treatment is found in the script ATP_depletion.m . The data used for this analysis is in the folder "data".
 
